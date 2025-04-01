@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', highlightCurrentSection);    
 });
 
-// Function to show the popup
+// Viser popup-vinduet ved at fjerne 'hidden'-klassen
 function pupUpFunction() {
-    const popUp = document.getElementById('popUp'); // Correct ID
+    const popUp = document.getElementById('popUp'); 
     popUp.classList.remove('hidden'); // Remove the 'hidden' class to show the popup
 }
 
-// Function to close the popup
+// Skjuler popup-vinduet ved at tilføje 'hidden'-klassen
 function closePopUp() {
-    const popUp = document.getElementById('popUp'); // Correct ID
-    popUp.classList.add('hidden'); // Add the 'hidden' class to hide the popup
+    const popUp = document.getElementById('popUp'); 
+    popUp.classList.add('hidden');
 }
