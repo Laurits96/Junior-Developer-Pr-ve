@@ -69,6 +69,90 @@ nav ul li a:hover {
     color: #4d61fc;
 }
 
+/* Columns styles */
+#columns .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: space-between;
+}
+
+#columns .column {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.column p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Column Icon styling */
+#columns .icon  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px; 
+    margin: 0 auto 10px;
+    /* transition: stroke-width 0.3s ease-in-out;  */
+}
+
+#columns .icon svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 0.75px;
+    stroke: #007BFF; 
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: white; 
+    transition: stroke 0.3s ease-in-out;
+}
+
+#columns .icon:hover svg {
+    stroke: #3a4bd1;
+    stroke-width: 1.5px;;
+}
+
+/* Pop up */
+.hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;  
+}
+
+/* Style the popup when visible */
+#popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 100;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* When the popup is visible */
+#popUp:not(.hidden) {
+    opacity: 1; 
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1); 
+}
+
 /* Button styles */
 .cta-button {
     background-color: #4d61fc;

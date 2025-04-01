@@ -46,5 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Call the function on scroll
-    window.addEventListener('scroll', highlightCurrentSection);
+    window.addEventListener('scroll', highlightCurrentSection);    
 });
+
+// Function to show the popup
+function pupUpFunction() {
+    const popUp = document.getElementById('popUp'); // Correct ID
+    popUp.classList.remove('hidden'); // Remove the 'hidden' class to show the popup
+}
+
+// Function to close the popup
+function closePopUp() {
+    const popUp = document.getElementById('popUp'); // Correct ID
+    popUp.classList.add('hidden'); // Add the 'hidden' class to hide the popup
+}
